@@ -37,6 +37,17 @@ angular.module('News', ['ui.router'])
 
         $scope.incrementUpvotes = function(post) {
             post.upvotes += 1;
+
+        $scope.addPost = function(){
+      if($scope.formContent === '') { return; }
+      $scope.posts.push({
+        title: $scope.formContent,
+        upvotes: 0,
+        comments: []
+      });
+      $scope.title = '';
+    };
+
         };
     }
 ])
