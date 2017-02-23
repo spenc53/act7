@@ -51,10 +51,12 @@ module.controller('MainCtrl', [
         $scope.addPost = function () {
             $scope.posts.push({ title: $scope.formContent, upvotes: 0 });
             $scope.formContent = '';
-            $scope.incrementUpvotes = function (post) {
-                post.upvotes += 1;
-            };
         };
+
+        $scope.incrementUpvotes = function (post) {
+            post.upvotes += 1;
+        };
+
         $scope.addPost = function () {
             if ($scope.formContent === '') { return; }
             $scope.posts.push({

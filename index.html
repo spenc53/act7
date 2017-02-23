@@ -26,8 +26,7 @@
             <button type="submit">Post</button>
         </form>
         <div ng-repeat="post in posts | orderBy: '-upvotes'">
-            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span> {{post.title}} - upvotes:
-            {{post.upvotes}}
+            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span> {{post.title}} - upvotes: {{post.upvotes}}
             <a href="#/posts/{{posts.indexOf(post)}}">Comments</a>
         </div>
     </script>
@@ -52,6 +51,7 @@
                 <input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
             </div>
             <button type="submit" class="btn btn-primary">Post</button>
+            <a href="#/home">Return to Home</a>
         </form>
 
     </script>
